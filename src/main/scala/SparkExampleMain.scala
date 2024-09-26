@@ -14,9 +14,9 @@ object SparkExampleMain extends App {
 
   val analysisResult = calculateAverageTipByPickupLocation(data = data)
 
-  println("Start")
+  println("START")
 
   analysisResult.write.option("header", "true").csv(outputPath)
 
-  println("Finish")
+  println("FINISH")
 }
