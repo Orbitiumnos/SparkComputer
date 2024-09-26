@@ -27,7 +27,7 @@ package object sparktutorial {
 
 
   def parseArgs(args: Array[String]): (String, String) = {
-    val parsedArgs = args.map(arg => arg.split(" ")).map(splitArg => splitArg(0) -> splitArg(1)).toMap
+    val parsedArgs = args.grouped(2).map(arg => arg(0) -> arg(1)).toMap
     val inputPath = parsedArgs("--input-path")
     val outputPath = parsedArgs("--output-path")
 
